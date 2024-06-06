@@ -1,4 +1,14 @@
-/******/ (function() { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define("ScormAgain", [], factory);
+	else if(typeof exports === 'object')
+		exports["ScormAgain"] = factory();
+	else
+		root["ScormAgain"] = factory();
+})(this, function() {
+return /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/lodash.debounce/index.js":
@@ -9309,10 +9319,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-window.Scorm12API = _Scorm12API__WEBPACK_IMPORTED_MODULE_1__["default"];
-window.Scorm2004API = _Scorm2004API__WEBPACK_IMPORTED_MODULE_0__["default"];
-window.AICC = _AICC__WEBPACK_IMPORTED_MODULE_2__["default"];
+/* harmony default export */ __webpack_exports__["default"] = ({
+  dummy: 'dummy',
+  Scorm2004API: _Scorm2004API__WEBPACK_IMPORTED_MODULE_0__["default"],
+  Scorm12API: _Scorm12API__WEBPACK_IMPORTED_MODULE_1__["default"],
+  AICCInternal: _AICC__WEBPACK_IMPORTED_MODULE_2__["default"]
+});
 }();
+/******/ 	return __webpack_exports__;
 /******/ })()
 ;
+});
 //# sourceMappingURL=scorm-again.js.map

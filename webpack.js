@@ -41,13 +41,7 @@ module.exports = {
   mode: 'development',
   devtool: 'source-map',
   entry: {
-    'aicc': './src/exports/aicc.js',
-    'scorm12': './src/exports/scorm12.js',
-    'scorm2004': './src/exports/scorm2004.js',
     'scorm-again': './src/exports/scorm-again.js',
-    'aicc.min': './src/exports/aicc.js',
-    'scorm12.min': './src/exports/scorm12.js',
-    'scorm2004.min': './src/exports/scorm2004.js',
     'scorm-again.min': './src/exports/scorm-again.js',
   },
   target: ['web', 'es5'],
@@ -58,6 +52,11 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
+    library: 'ScormAgain',
+    libraryTarget: 'umd',
+    filename: '[name].js',
+    umdNamedDefine: true,
+    globalObject: 'this',
     environment: {
       arrowFunction: false,
     },

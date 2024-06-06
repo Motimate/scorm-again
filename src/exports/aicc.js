@@ -1,3 +1,2 @@
 import AICC from '../AICC';
-
-window.AICC = AICC;
+export default AICC;
